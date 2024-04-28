@@ -12,7 +12,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-   select * from production_brands where brand_name like  @Brand_name + '%'
+   select brand_id, brand_name from production_brands where brand_name like  @Brand_name + '%'
+
 END
 
 GO
